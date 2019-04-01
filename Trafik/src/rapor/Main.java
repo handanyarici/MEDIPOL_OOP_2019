@@ -1,6 +1,9 @@
 package rapor;
 
+import java.io.File;
 import java.util.Date;
+
+import util.FileUtil;
 
 public class Main {
 
@@ -23,17 +26,22 @@ public class Main {
 		trafikRaporu.setSuclu(suclu);
 		trafikRaporu.setRaporTarihi(new Date());
 		trafikRaporu.setTanim("Radar Raporlari");
-		raporHazirla(ceza1.getCezaMiktari(), ceza1.getTanim(), trafikPolisi.getIsim(), trafikRaporu.getRaporTarihi(),suclu.getIsim());
+		String rapor = raporHazirla(ceza1.getCezaMiktari(), ceza1.getTanim(), trafikPolisi.getIsim(), trafikRaporu.getRaporTarihi(),suclu.getIsim());
+		File file = new File("C:\\Users\\TCHYARICI\\Desktop\\rapor.txt");
+		FileUtil.writeFile(rapor, file);
+		String dosyaIcerigi = FileUtil.readFile(file);
+		System.out.println(dosyaIcerigi);
 	}
 
-	private static void raporHazirla(double cezaMiktari, String cezaTanimi, String polisAdi, Date raporTarihi, String sucluAdi) {
+	private static String raporHazirla(double cezaMiktari, String cezaTanimi, String polisAdi, Date raporTarihi, String sucluAdi) {
 		RaporBilgileri kemalinRaporu = new RaporBilgileri();
 		kemalinRaporu.setCezaMiktari(cezaMiktari);
 		kemalinRaporu.setCezaTanimi(cezaTanimi);
 		kemalinRaporu.setPolisAdi(polisAdi);
 		kemalinRaporu.setRaporTarihi(raporTarihi);
 		kemalinRaporu.setSucluAdi(sucluAdi);
-		System.out.println(kemalinRaporu.toString());
+		//System.out.println(kemalinRaporu.toString());
+		return kemalinRaporu.toString();
 	}
 
 }
