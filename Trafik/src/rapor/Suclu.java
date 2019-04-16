@@ -1,16 +1,25 @@
 package rapor;
 
-public class Suclu {
-	private String isim;
+import sorgu.Vatandas;
+
+public class Suclu extends Vatandas{
+
+	private Ceza[] cezalar;
 	private long id;
 
-	public String getIsim() {
-		return isim;
+	public Suclu(String tcKimlik, String isim) {
+		super(tcKimlik, isim);
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setIsim(String isim) {
-		this.isim = isim;
+
+	public Suclu(String tcKimlik) {
+		super(tcKimlik);
+		// TODO Auto-generated constructor stub
 	}
+
+
+
 
 	public long getId() {
 		return id;
@@ -18,6 +27,16 @@ public class Suclu {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+
+	public Ceza[] getCezalar() {
+		return cezalar;
+	}
+
+
+	public void setCezalar(Ceza[] cezalar) {
+		this.cezalar = cezalar;
 	}
 
 }

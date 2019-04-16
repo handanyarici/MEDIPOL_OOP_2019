@@ -32,7 +32,7 @@ public class FileUtil {
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bReader = new BufferedReader(fileReader);
 			while ((line = bReader.readLine()) != null) {
-			    dosyaIcerigi += line;
+			    dosyaIcerigi += line + "\n";
 			}
 			 bReader.close();
 

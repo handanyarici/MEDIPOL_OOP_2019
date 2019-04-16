@@ -10,9 +10,8 @@ public class Main {
 	public static void main(String[] args) {
 		TrafikPolisi trafikPolisi = new TrafikPolisi("Dervis");
 		///////////////////////////////////////
-		Suclu suclu = new Suclu();
+		Suclu suclu = new Suclu("143423423423","Kemal");
 		suclu.setId(100);
-		suclu.setIsim("Kemal");
 		//////////////////////////
 		Ceza ceza1 = new Ceza();
 		ceza1.setId(1);
