@@ -1,0 +1,5 @@
+1;Radar Cezasi;200
+2;Trafik Isigi cezasi;100
+3;Yaya gecisi ihlali;80
+4;Hatali Sollama;120
+5;Alkollu arac kullanma;1500
